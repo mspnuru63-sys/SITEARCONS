@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ARCONS</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -32,20 +34,16 @@
         .video-thumb:hover .play-overlay { opacity: 1; }
 
         .nuru{
-            border-radius: 50%;
-            height: 400px;
-            width: 400px;
+            
+            height: 500px;
+            width: 500px;
             z-index: 2;
-            box-shadow: 
-            0 0 10px #ffffff,        /* Éclat immédiat blanc pur */
-            0 0 20px #ffea00,        /* Première lueur jaune intense */
-            0 0 40px #ffae00,        /* Diffusion orange/jaune chaud */
-            0 0 80px #eeff00,        /* Grand halo lumineux */
-            0 0 120px rgba(255, 145, 0, 0.6);
+            border-radius: 12px;
+            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.603);
+           
             position: relative;
             left: 100px;
             bottom: 50px;
-            animation: continuousZoom 2s ease-in-out infinite alternate;
             
 
         }
@@ -119,15 +117,15 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full">
             <div class="flex flex-col lg:flex-row items-center gap-12">
                 <div class="flex-1 max-w-3xl">
-                    <h1 class="text-5xl md:text-6xl font-extrabold leading-tight mb-6 textenuru">L'archivage du futur,<br>aujourd'hui.</h1>
-                    <p class="text-xl md:text-2xl mb-8 opacity-90">Gestion électronique, numérisation et conservation de vos documents pour un avenir durable.</p>
-                    <div class="flex flex-wrap gap-4">
+                    <h1 class="text-5xl md:text-6xl font-extrabold leading-tight mb-6 textenuru" data-aos="fade-up">L'archivage du futur,<br>aujourd'hui.</h1>
+                    <p class="text-xl md:text-2xl mb-8 opacity-90" data-aos="fade-up" data-aos-delay="100">Gestion électronique, numérisation et conservation de vos documents pour un avenir durable.</p>
+                    <div class="flex flex-wrap gap-4" data-aos="fade-up" data-aos-delay="200">
                         <a href="#services" class="bg-emerald-500 hover:bg-emerald-600  px-8 py-3.5 rounded-lg font-semibold transition text-lg orange">Découvrir nos services</a>
                         <a href="#contact" class=" border-white hover:bg-whitenoire px-8 py-3.5 rounded-lg font-semibold transition text-lg transparent">Laissez un message</a>
                     </div>
                 </div>
                 <!-- Image Verdesca insérée ici -->
-                <div class="flex-1 flex justify-center">
+                <div class="flex-1 flex justify-center" data-aos="fade-left">
                     <img src="logoArcons.jpg" alt="Site Verdesca - ARCONS" class=" nuru">
                 </div>
             </div>
@@ -139,26 +137,26 @@
     <section id="apropos" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col lg:flex-row gap-16 items-center">
-                <div class="flex-1">
+                <div class="flex-1" data-aos="fade-right">
                     <h2 class="text-4xl font-bold text-slate-900 mb-6 section-title">Qui sommes-nous ?</h2>
                     <p class="text-lg text-gray-600 mb-6">L'Agence Nationale d'Archivage et de Gestion Électronique (ARCONS) a été créée pour moderniser la conservation et l'accès aux documents publics et privés. Nous œuvrons pour une gestion documentaire efficace, sécurisée et respectueuse de l'environnement.</p>
                     <p class="text-lg text-gray-600 mb-8">Notre mission : accompagner les institutions et entreprises dans la numérisation, l'archivage physique et électronique, la dématérialisation des procédures, et la formation des acteurs aux métiers de l'information.</p>
                     <div class="grid grid-cols-3 gap-6">
-                        <div class="bg-emerald-50 p-6 rounded-xl border border-emerald-200">
+                        <div class="bg-emerald-50 p-6 rounded-xl border border-emerald-200" data-aos="fade-up" data-aos-delay="100">
                             <div class=" text-3xl font-bold">12+</div>
                             <div class="text-gray-600 mt-1">Années d'expérience</div>
                         </div>
-                        <div class="bg-emerald-50 p-6 rounded-xl border border-emerald-200">
+                        <div class="bg-emerald-50 p-6 rounded-xl border border-emerald-200" data-aos="fade-up" data-aos-delay="200">
                             <div class=" text-3xl font-bold">150</div>
                             <div class="text-gray-600 mt-1">Projets réalisés</div>
                         </div>
-                        <div class="bg-emerald-50 p-6 rounded-xl border border-emerald-200">
+                        <div class="bg-emerald-50 p-6 rounded-xl border border-emerald-200" data-aos="fade-up" data-aos-delay="300">
                             <div class=" text-3xl font-bold" >95%</div>
                             <div class="text-gray-600 mt-1">Satisfaction</div>
                         </div>
                     </div>
                 </div>
-                <div class="flex-1">
+                <div class="flex-1" data-aos="fade-left">
                     <img src="Bureau DG 1.png" alt="Archives" class="rounded-2xl shadow-2xl w-full object-cover h-96">
                 </div>
             </div>
@@ -168,10 +166,10 @@
     <!-- Services -->
     <section id="services" class="py-20 bg-gray-50 ">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-4xl font-bold text-slate-900 mb-4 text-center">Nos domaines d'expertise</h2>
-            <p class="text-lg text-gray-600 mb-12 text-center max-w-3xl mx-auto">Nous couvrons l'ensemble de la chaîne de valeur de la gestion documentaire, de la collecte à l'archivage définitif.</p>
+            <h2 class="text-4xl font-bold text-slate-900 mb-4 text-center" data-aos="fade-up">Nos domaines d'expertise</h2>
+            <p class="text-lg text-gray-600 mb-12 text-center max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">Nous couvrons l'ensemble de la chaîne de valeur de la gestion documentaire, de la collecte à l'archivage définitif.</p>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="card-hover bg-white rounded-2xl p-6 shadow-md transition">
+                <div class="card-hover bg-white rounded-2xl p-6 shadow-md transition" data-aos="zoom-in" data-aos-delay="0">
                     <div class="couleur mb-4">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6M9 16h6M9 8h6M7 3h10a2 2 0 012 2v14a2 2 0 01-2 2H7a2 2 0 01-2-2V5a2 2 0 012-2z" />
@@ -180,7 +178,7 @@
                     <h3 class="text-xl font-semibold mb-2">Numérisation</h3>
                     <p class="text-gray-600">Scan haute qualité de documents papiers, conversion en PDF/A et indexation pour une recherche rapide.</p>
                 </div>
-                <div class="card-hover bg-white rounded-2xl p-6 shadow-md transition">
+                <div class="card-hover bg-white rounded-2xl p-6 shadow-md transition" data-aos="zoom-in" data-aos-delay="100">
                     <div class="couleur mb-4">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8M9 12h6" />
@@ -189,7 +187,7 @@
                     <h3 class="text-xl font-semibold mb-2">Archivage physique</h3>
                     <p class="text-gray-600">Conservation sécurisée de documents papier dans des locaux aux normes, avec gestion des délais de conservation.</p>
                 </div>
-                <div class="card-hover bg-white rounded-2xl p-6 shadow-md transition">
+                <div class="card-hover bg-white rounded-2xl p-6 shadow-md transition" data-aos="zoom-in" data-aos-delay="200">
                     <div class="couleur mb-4">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 7v10c0 2 2 4 4 4h8c2 0 4-2 4-4V7M4 7h16M4 7l2-2h12l2 2M9 11h6" />
@@ -198,7 +196,7 @@
                     <h3 class="text-xl font-semibold mb-2">GED (Gestion Électronique)</h3>
                     <p class="text-gray-600">Déploiement de plateformes de GED pour la dématérialisation des processus, workflows et archives électroniques.</p>
                 </div>
-                <div class="card-hover bg-white rounded-2xl p-6 shadow-md transition">
+                <div class="card-hover bg-white rounded-2xl p-6 shadow-md transition" data-aos="zoom-in" data-aos-delay="300">
                     <div class="couleur mb-4">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4M5 4h14a2 2 0 012 2v12a2 2 0 01-2 2H5a2 2 0 01-2-2V6a2 2 0 012-2z" />
@@ -214,10 +212,10 @@
     <!-- Projets -->
     <section id="projets" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-4xl font-bold text-slate-900 mb-4 text-center">Nos prestations</h2>
-            <p class="text-lg text-gray-600 mb-12 text-center max-w-3xl mx-auto">Des projets phares qui illustrent notre engagement pour une gestion documentaire moderne et durable.</p>
+            <h2 class="text-4xl font-bold text-slate-900 mb-4 text-center" data-aos="fade-up">Nos prestations</h2>
+            <p class="text-lg text-gray-600 mb-12 text-center max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">Des projets phares qui illustrent notre engagement pour une gestion documentaire moderne et durable.</p>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="card-hover bg-white rounded-2xl overflow-hidden shadow-lg transition">
+                <div class="card-hover bg-white rounded-2xl overflow-hidden shadow-lg transition" data-aos="fade-right">
                     <img src="services.png" alt="Numérisation de registres" class="h-64 w-full object-cover">
                     <div class="p-6">
                         <h3 class="text-xl font-semibold mb-2">Numérisation des registres d'état civil</h3>
@@ -225,7 +223,7 @@
                         
                     </div>
                 </div>
-                <div class="card-hover bg-white rounded-2xl overflow-hidden shadow-lg transition ">
+                <div class="card-hover bg-white rounded-2xl overflow-hidden shadow-lg transition " data-aos="fade-left">
                     <img src="OUVRIER.png" alt="Archivage des archives municipales" class="h-64 w-full object-cover">
                     <div class="p-6">
                         <h3 class="text-xl font-semibold mb-2">Archivage des archives municipales</h3>
@@ -240,10 +238,10 @@
     <!-- Actualités -->
     <section id="actualites" class="py-20 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-4xl font-bold text-slate-900 mb-4 text-center">Actualités</h2>
-            <p class="text-lg text-gray-600 mb-12 text-center max-w-3xl mx-auto">Restez informé des dernières avancées du secteur de l'archivage.</p>
+            <h2 class="text-4xl font-bold text-slate-900 mb-4 text-center" data-aos="fade-up">Actualités</h2>
+            <p class="text-lg text-gray-600 mb-12 text-center max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">Restez informé des dernières avancées du secteur de l'archivage.</p>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <article class="card-hover bg-white rounded-2xl overflow-hidden shadow-lg transition">
+                <article class="card-hover bg-white rounded-2xl overflow-hidden shadow-lg transition" data-aos="fade-up" data-aos-delay="0">
                     <img src="Hangar aménagé.png" alt="Actualité 1" class="h-48 w-full object-cover">
                     <div class="p-6">
                         <span class="text-xs font-semibold text-emerald-600 uppercase tracking-wide">Infrastructures</span>
@@ -252,7 +250,7 @@
                         <a href="#" class="text-emerald-600 font-mediumnoire">Lire la suite →</a>
                     </div>
                 </article>
-                <article class="card-hover bg-white rounded-2xl overflow-hidden shadow-lg transition">
+                <article class="card-hover bg-white rounded-2xl overflow-hidden shadow-lg transition" data-aos="fade-up" data-aos-delay="100">
                     <img src="verdesca.png" alt="Actualité 2" class="h-48 w-full object-cover">
                     <div class="p-6">
                         <span class="text-xs font-semibold text-emerald-600 uppercase tracking-wide">Innovation</span>
@@ -261,7 +259,7 @@
                         <a href="#" class="text-emerald-600 font-mediumnoire">Lire la suite →</a>
                     </div>
                 </article>
-                <article class="card-hover bg-white rounded-2xl overflow-hidden shadow-lg transition">
+                <article class="card-hover bg-white rounded-2xl overflow-hidden shadow-lg transition" data-aos="fade-up" data-aos-delay="200">
                     <img src="chair.png" alt="Actualité 3" class="h-48 w-full object-cover">
                     <div class="p-6">
                         <span class="text-xs font-semibold text-emerald-600 uppercase tracking-wide">Formation</span>
@@ -277,12 +275,12 @@
     <!-- Vidéographie -->
     <section id="videographie" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-4xl font-bold text-slate-900 mb-4 text-center">Vidéographie</h2>
-            <p class="text-lg text-gray-600 mb-12 text-center max-w-3xl mx-auto">Découvrez nos activités et réalisations en vidéo.</p>
+            <h2 class="text-4xl font-bold text-slate-900 mb-4 text-center" data-aos="fade-up">Vidéographie</h2>
+            <p class="text-lg text-gray-600 mb-12 text-center max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">Découvrez nos activités et réalisations en vidéo.</p>
             
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Vidéo 1 -->
-                <div class="card-hover bg-white rounded-2xl overflow-hidden shadow-lg transition video-card" data-video="dQw4w9WgXcQ">
+                <div class="card-hover bg-white rounded-2xl overflow-hidden shadow-lg transition video-card" data-video="dQw4w9WgXcQ" data-aos="fade-up" data-aos-delay="0">
                     <div class="video-thumb">
                         <img src="presentation.png" alt="Vidéo 1" class="h-48 w-full object-cover">
                         <div class="play-overlay">
@@ -302,7 +300,7 @@
                 </div>
 
                 <!-- Vidéo 2 -->
-                <div class="card-hover bg-white rounded-2xl overflow-hidden shadow-lg transition video-card" data-video="M7lc1UVf-VE">
+                <div class="card-hover bg-white rounded-2xl overflow-hidden shadow-lg transition video-card" data-video="M7lc1UVf-VE" data-aos="fade-up" data-aos-delay="100">
                     <div class="video-thumb">
                         <img src="OUVRIER.png" alt="Vidéo 2" class="h-48 w-full object-cover">
                         <div class="play-overlay">
@@ -322,7 +320,7 @@
                 </div>
 
                 <!-- Vidéo 3 -->
-                <div class="card-hover bg-white rounded-2xl overflow-hidden shadow-lg transition video-card" data-video="1k2UOn2n2eQ">
+                <div class="card-hover bg-white rounded-2xl overflow-hidden shadow-lg transition video-card" data-video="1k2UOn2n2eQ" data-aos="fade-up" data-aos-delay="200">
                     <div class="video-thumb">
                         <img src="Hangar aménagé.png" alt="Vidéo 3" class="h-48 w-full object-cover">
                         <div class="play-overlay">
@@ -342,7 +340,7 @@
                 </div>
 
                 <!-- Vidéo 4 -->
-                <div class="card-hover bg-white rounded-2xl overflow-hidden shadow-lg transition video-card" data-video="T2S8bE7eG7Y">
+                <div class="card-hover bg-white rounded-2xl overflow-hidden shadow-lg transition video-card" data-video="T2S8bE7eG7Y" data-aos="fade-up" data-aos-delay="0">
                     <div class="video-thumb">
                         <img src="structure de stockage.png" alt="Vidéo 4" class="h-48 w-full object-cover">
                         <div class="play-overlay">
@@ -362,7 +360,7 @@
                 </div>
 
                 <!-- Vidéo 5 -->
-                <div class="card-hover bg-white rounded-2xl overflow-hidden shadow-lg transition video-card" data-video="Z0lL5hBvM9A">
+                <div class="card-hover bg-white rounded-2xl overflow-hidden shadow-lg transition video-card" data-video="Z0lL5hBvM9A" data-aos="fade-up" data-aos-delay="100">
                     <div class="video-thumb">
                         <img src="dematerialisation.png" alt="Vidéo 5" class="h-48 w-full object-cover">
                         <div class="play-overlay">
@@ -382,7 +380,7 @@
                 </div>
 
                 <!-- Vidéo 6 -->
-                <div class="card-hover bg-white rounded-2xl overflow-hidden shadow-lg transition video-card" data-video="G3V6jQ5vCn0">
+                <div class="card-hover bg-white rounded-2xl overflow-hidden shadow-lg transition video-card" data-video="G3V6jQ5vCn0" data-aos="fade-up" data-aos-delay="200">
                     <div class="video-thumb">
                         <img src="temoignage.png" alt="Vidéo 6" class="h-48 w-full object-cover">
                         <div class="play-overlay">
@@ -407,11 +405,11 @@
     <!-- Contact -->
     <section id="contact" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-4xl font-bold text-slate-900 mb-4 text-center">Contactez-nous</h2>
-            <p class="text-lg text-gray-600 mb-12 text-center max-w-3xl mx-auto">Nous serons ravis de répondre à vos questions et d'étudier vos projets d'archivage.</p>
+            <h2 class="text-4xl font-bold text-slate-900 mb-4 text-center" data-aos="fade-up">Contactez-nous</h2>
+            <p class="text-lg text-gray-600 mb-12 text-center max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">Nous serons ravis de répondre à vos questions et d'étudier vos projets d'archivage.</p>
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
                 <div>
-                    <div class="space-y-6">
+                    <div class="space-y-6" data-aos="fade-right">
                         <div class="flex items-start gap-4">
                             <div class="bg-emerald-100 p-3 rounded-lg"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div>
                             <div><h4 class="font-semibold">Adresse</h4><p class="text-gray-600">123 Avenue de l'Indépendance, Brazzaville</p></div>
@@ -427,7 +425,7 @@
                     </div>
                 </div>
                 <div>
-                    <form class="bg-gray-50 p-6 rounded-2xl shadow-md">
+                    <form class="bg-gray-50 p-6 rounded-2xl shadow-md" data-aos="fade-left">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                             <div>
                                 <label class="block text-sm font-medium text-slate-700 mb-1">Nom complet</label>
@@ -502,7 +500,16 @@
         </div>
     </div>
 
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
+        // Initialisation AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+
         // Menu mobile
         document.getElementById('menuBtn').addEventListener('click', () => {
             document.getElementById('mobileMenu').classList.toggle('hidden');
