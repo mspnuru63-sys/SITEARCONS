@@ -1,0 +1,83 @@
+/* ========== ARCONS — Style partagé (pages internes) ========== */
+html { width: 100dvw; overflow-x: hidden; }
+body { font-family: 'Poppins', system-ui, -apple-system, sans-serif; overflow-x: hidden; width: 100dvw; }
+
+/* --- TOP BAR --- */
+.top-bar { background: linear-gradient(135deg, #0B1F3A 0%, #111253 100%); color: white; font-size: 0.75rem; padding: 0.5rem 0; }
+.top-bar a { color: rgba(255,255,255,0.8); transition: color 0.2s; }
+.top-bar a:hover { color: #f9d716; }
+
+/* --- NAV --- */
+.main-nav { background: #ffffff; box-shadow: 0 2px 20px rgba(0,0,0,0.08); position: sticky; top: 0; z-index: 9999; transition: all 0.3s ease; }
+.main-nav.scrolled { box-shadow: 0 4px 30px rgba(0,0,0,0.12); }
+.nav-link { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.03em; padding: 1.25rem 0.75rem; color: #374151; border-bottom: 3px solid transparent; transition: all 0.25s ease; white-space: nowrap; display: inline-flex; align-items: center; gap: 0.25rem; cursor: pointer; background: none; border-top: none; border-left: none; border-right: none; }
+.nav-link:hover, .nav-link.active { color: #111253; border-bottom-color: #f9d716; }
+.nav-link svg { width: 14px; height: 14px; }
+
+.dropdown { position: relative; }
+.dropdown-menu { position: absolute; top: 100%; left: 0; min-width: 220px; background: white; border-radius: 0 0 12px 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.12); border-top: 3px solid #f9d716; opacity: 0; visibility: hidden; transform: translateY(10px); transition: all 0.3s ease; z-index: 10000; padding: 0.5rem 0; }
+.dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+.dropdown-menu a { display: flex; align-items: center; gap: 0.5rem; padding: 0.6rem 1.25rem; font-size: 0.8rem; color: #4b5563; transition: all 0.2s ease; white-space: nowrap; text-decoration: none; }
+.dropdown-menu a:hover { background: #f8fafc; color: #111253; padding-left: 1.5rem; }
+.dropdown-menu a svg { width: 12px; height: 12px; opacity: 0; transform: translateX(-6px); transition: all 0.2s ease; color: #f9d716; }
+.dropdown-menu a:hover svg { opacity: 1; transform: translateX(0); }
+
+/* --- MENU MOBILE --- */
+.mobile-menu { background: white; border-top: 1px solid #e5e7eb; max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+.mobile-menu.open { max-height: 900px; }
+.mobile-menu a, .mobile-menu button { display: block; width: 100%; text-align: left; padding: 0.75rem 1.5rem; font-size: 0.9rem; color: #374151; border-bottom: 1px solid #f3f4f6; background: none; border-top: none; border-left: none; border-right: none; cursor: pointer; text-decoration: none; }
+.mobile-menu a:hover { background: #f8fafc; color: #111253; }
+.mobile-submenu { padding-left: 1rem; background: #f9fafb; display: none; }
+.mobile-submenu.open { display: block; }
+
+/* --- BANNIÈRE DE PAGE --- */
+.page-hero { background: linear-gradient(120deg, rgba(11,31,58,0.92) 0%, rgba(17,18,83,0.75) 100%), url('../bazard.jpg') center/cover no-repeat; padding: 6rem 0 5rem; color: white; position: relative; }
+.page-hero h1 { font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 800; margin-bottom: 1rem; }
+.page-hero p { font-size: 1.1rem; color: rgba(255,255,255,0.8); max-width: 700px; }
+.breadcrumb { display: flex; gap: 0.5rem; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem; color: rgba(255,255,255,0.65); }
+.breadcrumb a { color: rgba(255,255,255,0.85); text-decoration: none; }
+.breadcrumb a:hover { color: #f9d716; }
+.breadcrumb .sep { color: #f9d716; }
+
+/* --- BLOCS DE CONTENU --- */
+.prose-block p { color: #4b5563; font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.2rem; }
+.prose-block h2 { font-size: 1.9rem; font-weight: 700; color: #0f172a; margin: 2.5rem 0 1rem; }
+.prose-block h3 { font-size: 1.3rem; font-weight: 600; color: #0f172a; margin: 2rem 0 0.75rem; }
+.prose-block ul { list-style: none; padding: 0; }
+.prose-block ul li { position: relative; padding-left: 1.75rem; margin-bottom: 0.6rem; color: #4b5563; }
+.prose-block ul li::before { content: ""; position: absolute; left: 0; top: 0.6rem; width: 0.6rem; height: 0.6rem; border-radius: 50%; background: #f9d716; }
+
+.info-card { background: #ffffff; border-radius: 1rem; padding: 1.75rem; box-shadow: 0 4px 20px rgba(0,0,0,0.06); border-top: 4px solid #f9d716; transition: transform 0.3s ease, box-shadow 0.3s ease; height: 100%; }
+.info-card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
+.info-card h3 { font-size: 1.15rem; font-weight: 700; color: #0f172a; margin-bottom: 0.5rem; }
+.info-card p { color: #64748b; font-size: 0.95rem; line-height: 1.6; }
+
+.quote-block { border-left: 5px solid #f9d716; padding: 1.5rem 1.75rem; background: #fffbeb; border-radius: 0.75rem; font-style: italic; color: #334155; font-size: 1.05rem; line-height: 1.7; }
+
+/* --- SIGNATURE DG --- */
+.dg-signature { border-top: 2px solid #f1f5f9; padding-top: 1.5rem; margin-top: 2rem; }
+.dg-signature .name { font-family: 'Poppins', serif; font-size: 1.4rem; font-weight: 700; color: #111253; font-style: italic; }
+.dg-signature .role { font-size: 0.85rem; color: #64748b; text-transform: uppercase; letter-spacing: 0.1em; }
+
+/* --- CARTES VIDÉO (page vidéographie) --- */
+.video-thumb { position: relative; overflow: hidden; border-radius: 1rem 1rem 0 0; }
+.video-thumb img { transition: transform 0.3s ease; }
+.video-thumb:hover img { transform: scale(1.05); }
+.play-overlay { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.3); opacity: 0; transition: opacity 0.3s; }
+.video-thumb:hover .play-overlay { opacity: 1; }
+
+/* --- NEWSLETTER --- */
+.newsletter-section { background: linear-gradient(135deg, rgba(11,31,58,0.92) 0%, rgba(31,122,99,0.7) 100%), url('../bazard.jpg') center/cover no-repeat; position: relative; }
+
+/* --- FORMULAIRE CONTACT --- */
+.form-input { width: 100%; border: 1px solid #d1d5db; border-radius: 0.5rem; padding: 0.75rem 1rem; outline: none; transition: border-color 0.2s ease, box-shadow 0.2s ease; font-family: inherit; }
+.form-input:focus { border-color: #f9d716; box-shadow: 0 0 0 3px rgba(249,215,22,0.2); }
+
+/* --- SECTION TITRE --- */
+.section-title { border-bottom: 3px solid #f9d716; display: inline-block; padding-bottom: 0.5rem; }
+
+/* --- COULEUR ACCENT --- */
+.text-accent { color: #f0a900; }
+
+/* --- SCROLL SUAVE --- */
+html { scroll-behavior: smooth; }

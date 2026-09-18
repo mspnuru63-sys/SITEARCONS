@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actualités — ARCONS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../logoArcons.jpg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="actualites" data-group="medias" class="bg-gray-50 text-slate-800">
+<div id="arcons-header"></div>
+
+<section class="page-hero">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="breadcrumb"><a href="../index.html">Accueil</a><span class="sep">/</span><span>Médias</span><span class="sep">/</span><span>Actualités</span></div>
+        <h1>Actualités</h1>
+        <p>Les évolutions d'ARCONS, de ses solutions et de ses projets structurants.</p>
+    </div>
+</section>
+
+<section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <article class="info-card" data-aos="fade-up">
+            <img src="../Hangar aménagé.png" class="w-full h-48 object-cover rounded-lg mb-4">
+            <span class="text-xs font-semibold text-emerald-600 uppercase tracking-wide">Infrastructures</span>
+            <h3 class="mt-2">VERDESCA : nouvelle approche de l'externalisation</h3>
+            <p>VERDESCA porte une nouvelle approche de l'externalisation des fonds d'archives et du patrimoine documentaire au Congo.</p>
+        </article>
+        <article class="info-card" data-aos="fade-up" data-aos-delay="100">
+            <img src="../verdesca.png" class="w-full h-48 object-cover rounded-lg mb-4">
+            <span class="text-xs font-semibold text-emerald-600 uppercase tracking-wide">Innovation</span>
+            <h3 class="mt-2">Un site ultra moderne</h3>
+            <p>L'infrastructure documentaire doit associer sécurité physique, organisation, traçabilité et maîtrise des accès.</p>
+        </article>
+        <article class="info-card" data-aos="fade-up" data-aos-delay="200">
+            <img src="../chair.png" class="w-full h-48 object-cover rounded-lg mb-4">
+            <span class="text-xs font-semibold text-emerald-600 uppercase tracking-wide">Formation</span>
+            <h3 class="mt-2">Programme de formation aux métiers de l'archivage</h3>
+            <p>ARCONS développe des parcours de formation adaptés aux métiers des archives et de la gouvernance documentaire.</p>
+        </article>
+    </div>
+</section>
+
+<div id="arcons-footer"></div>
+<script src="layout.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init({duration:800,once:true});</script>
+</body>
+</html>
