@@ -11,7 +11,7 @@
         <span class="hidden sm:inline">République du Congo — Brazzaville</span>
         <a href="tel:+242000000000" class="flex items-center gap-1">
           <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-          +242 00 000 00 00
+          +242 06 730 44 41
         </a>
         <a href="mailto:info@arcons.cg" class="hidden sm:flex items-center gap-1">
           <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
@@ -144,7 +144,7 @@
   const footerHTML = `
   <section class="newsletter-section py-20">
     <div class="max-w-2xl mx-auto px-4 text-center relative z-10">
-      <h3 class="text-3xl md:text-4xl font-bold text-white mb-3">Newsletter</h3>
+      <h3 class="text-3xl md:text-4xl font-bold text-white mb-3"> Abonnez - vous</h3>
       <p class="text-white/70 text-base md:text-lg mb-8">Recevez nos actualités, projets et opportunités.</p>
       <form class="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto" onsubmit="event.preventDefault(); alert('Merci pour votre abonnement !');">
         <input type="email" placeholder="Votre adresse email" class="flex-1 px-5 py-3 rounded-md bg-white text-sm text-gray-900 placeholder:text-gray-400 outline-none focus:ring-2 focus:ring-yellow-400" required>
@@ -198,9 +198,9 @@
             <h4 class="text-sm font-bold uppercase tracking-wider mb-6" style="color: rgb(255, 195, 0);">Contact</h4>
             <ul class="space-y-4 text-sm text-white/50">
               <li>République du Congo — Brazzaville</li>
-              <li>+242 00 000 00 00</li>
+              <li>+242 06 730 44 41</li>
               <li>info@arcons.cg</li>
-              <li>Lun - Ven : 8h00 - 17h00</li>
+              <li> </li>
             </ul>
           </div>
         </div>

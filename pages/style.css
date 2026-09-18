@@ -15,7 +15,7 @@ body { font-family: 'Poppins', system-ui, -apple-system, sans-serif; overflow-x:
 .nav-link svg { width: 14px; height: 14px; }
 
 .dropdown { position: relative; }
-.dropdown-menu { position: absolute; top: 100%; left: 0; min-width: 220px; background: white; border-radius: 0 0 12px 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.12); border-top: 3px solid #f9d716; opacity: 0; visibility: hidden; transform: translateY(10px); transition: all 0.3s ease; z-index: 10000; padding: 0.5rem 0; }
+.dropdown-menu { position: absolute; top: 100%; left: 0; min-width: 220px; background: white; border-radius: 0 0 12px 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.12); border-top: 3px solid #0f0249; opacity: 0; visibility: hidden; transform: translateY(10px); transition: all 0.3s ease; z-index: 10000; padding: 0.5rem 0; }
 .dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
 .dropdown-menu a { display: flex; align-items: center; gap: 0.5rem; padding: 0.6rem 1.25rem; font-size: 0.8rem; color: #4b5563; transition: all 0.2s ease; white-space: nowrap; text-decoration: none; }
 .dropdown-menu a:hover { background: #f8fafc; color: #111253; padding-left: 1.5rem; }
@@ -47,7 +47,7 @@ body { font-family: 'Poppins', system-ui, -apple-system, sans-serif; overflow-x:
 .prose-block ul li { position: relative; padding-left: 1.75rem; margin-bottom: 0.6rem; color: #4b5563; }
 .prose-block ul li::before { content: ""; position: absolute; left: 0; top: 0.6rem; width: 0.6rem; height: 0.6rem; border-radius: 50%; background: #f9d716; }
 
-.info-card { background: #ffffff; border-radius: 1rem; padding: 1.75rem; box-shadow: 0 4px 20px rgba(0,0,0,0.06); border-top: 4px solid #f9d716; transition: transform 0.3s ease, box-shadow 0.3s ease; height: 100%; }
+.info-card { background: #ffffff; border-radius: 1rem; padding: 1.75rem; box-shadow: 0 4px 20px rgba(0,0,0,0.06); border-top: 4px solid #130249ce; transition: transform 0.3s ease, box-shadow 0.3s ease; height: 100%; }
 .info-card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
 .info-card h3 { font-size: 1.15rem; font-weight: 700; color: #0f172a; margin-bottom: 0.5rem; }
 .info-card p { color: #64748b; font-size: 0.95rem; line-height: 1.6; }
