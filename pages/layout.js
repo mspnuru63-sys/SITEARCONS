@@ -205,7 +205,7 @@
           </div>
         </div>
         <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p class="text-white/40 text-sm">© 2026 ARCONS — Tous droits réservés. | www.archivescongo.vercel.app</p>
+          <p class="text-white/40 text-sm">© 2026 ARCONS — Tous droits réservés. | contact@archivescongo.com</p>
           <div class="flex gap-6 text-sm text-white/40">
             <a href="#" class="hover:text-white transition">Mentions légales</a>
             <a href="#" class="hover:text-white transition">Politique de confidentialité</a>
@@ -280,3 +280,46 @@
     if (vc && vc.dataset.video) window.openVideo(vc.dataset.video);
   });
 })();
+document.getElementById('contact-form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    const form = e.target;
+    const btn = document.getElementById('submit-btn');
+    const status = document.getElementById('form-status');
+
+    // Changement d'état du bouton pendant l'envoi
+    btn.disabled = true;
+    btn.style.opacity = '0.7';
+    btn.textContent = "Envoi en cours...";
+
+    // Récupération des données du formulaire
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
+
+    try {
+        // Envoi asynchrone via l'URL AJAX de FormSubmit
+        const response = await fetch('https://formsubmit.co/ajax/contact@archivescongo.com', {
+            method: 'POST',
+            headers: { 
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify(data)
+        });
+
+        if (response.ok) {
+            status.textContent = "Merci ! Votre message a bien été envoyé.";
+            status.className = "mt-4 text-center text-sm font-medium text-emerald-600 block";
+            form.reset();
+        } else {
+            throw new Error("Erreur réseau");
+        }
+    } catch (error) {
+        status.textContent = "Une erreur s'est produite. Veuillez réessayer.";
+        status.className = "mt-4 text-center text-sm font-medium text-red-600 block";
+    } finally {
+        btn.disabled = false;
+        btn.style.opacity = '1';
+        btn.textContent = "Envoyer le message";
+    }
+});
