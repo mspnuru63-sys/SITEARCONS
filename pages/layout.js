@@ -280,7 +280,7 @@
     if (vc && vc.dataset.video) window.openVideo(vc.dataset.video);
   });
 })();
-document.getElementById('contact-form').addEventListener('submit', async function(e) {
+document.getElementById('contact-form')?.addEventListener('submit', async function(e) {
     e.preventDefault();
 
     const form = e.target;
@@ -324,3 +324,29 @@ document.getElementById('contact-form').addEventListener('submit', async functio
     }
 });
 
+
+(function () {
+  function initTyping() {
+    const el = document.querySelector('h1.typing');
+    if (!el) return;
+
+    const text = el.dataset.text || el.textContent.trim();
+    el.textContent = '';
+    el.classList.add('typing-active');
+
+    let i = 0;
+    const interval = setInterval(() => {
+      el.textContent = text.slice(0, ++i);
+      if (i >= text.length) {
+        clearInterval(interval);
+        el.classList.remove('typing-active');
+      }
+    }, 60); // vitesse : 60ms par lettre (ajuste selon ton goût)
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initTyping);
+  } else {
+    initTyping();
+  }
+})();

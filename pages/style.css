@@ -82,4 +82,14 @@ body { font-family: 'Poppins', system-ui, -apple-system, sans-serif; overflow-x:
 /* --- SCROLL SUAVE --- */
 html { scroll-behavior: smooth; }
 
+.typing.typing-active::after {
+  content: "|";
+  display: inline-block;
+  margin-left: 3px;
+  animation: blink 0.7s steps(1) infinite;
+  color: currentColor;
+}
 
+@keyframes blink {
+  50% { opacity: 0; }
+}
