@@ -93,3 +93,4 @@ html { scroll-behavior: smooth; }
 @keyframes blink {
   50% { opacity: 0; }
 }
+.taille{height: 300px !important;}
