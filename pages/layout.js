@@ -323,3 +323,4 @@ document.getElementById('contact-form').addEventListener('submit', async functio
         btn.textContent = "Envoyer le message";
     }
 });
+
